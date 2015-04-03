@@ -6,7 +6,8 @@ This teamwork project assignment is designed to develop skills for creating REST
 Design and implement RESTful Web services. Deploy the ASP.NET Web API application in the cloud. Implement a JavaScript client application, which consumes the services from the cloud.
 You are free to choose what kind of services and application to build. You could implement project like:
 
-***Tic-tac-toe Game***
+**Tic-tac-toe Game**
+--------------------
 - The app holds users, games, …
 - Users can create game
 - Users can join an existing game
@@ -14,11 +15,13 @@ You are free to choose what kind of services and application to build. You could
 - Users receive notifications when a user in a game of theirs has made their move
 
 ***Web Chat Application***
+--------------------
 - The app holds users, messages, notifications, …
 - Users can send messages between each other
 - Users receive notification when another user send them a message
 
 *General Requirements*
+====================
 
 All projects should implement authentication (user registration, login and logout). Some services should be public, while others should be private (accessed after successful login).
 
@@ -56,7 +59,7 @@ Each team will have to deliver a public defense of its work in front of the othe
  - Please be strict in timing! On the 10th minute you will be interrupted! It is good idea to leave the last 2 minutes for questions from the other students, trainers and assistants.
  - Be well prepared for presenting maximum of your work for minimum time. Bring your own laptop. Test it preliminary with the multimedia projector. Open the project assets beforehand to save time.
 
- **Assessment Criteria**
+**Assessment Criteria**
 - Service Authentication (register / login / logout) – 0…10
 - Service Functionality (at least 5 service endpoints) – 0…25
 - Client UI (the focus is on the services, not on the client, so the UI gives less points) – 0…10
