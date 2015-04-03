@@ -1,12 +1,14 @@
-*Teamwork Project Assignment for the Web Services and Cloud Course @ SoftUni*
+*Teamwork Project Assignment for the Web Services and Cloud Course @SoftUni*
 ====================
 This teamwork project assignment is designed to develop skills for creating RESTful Web services (using ASP.NET Web API) and to deploy the Web services in cloud environment like Azure and AppHarbor.
+
 **Project Description**
 --------------------
 Design and implement RESTful Web services. Deploy the ASP.NET Web API application in the cloud. Implement a JavaScript client application, which consumes the services from the cloud.
 You are free to choose what kind of services and application to build. You could implement project like:
 
 **Tic-tac-toe Game**
+
 - The app holds users, games, …
 - Users can create game
 - Users can join an existing game
@@ -14,6 +16,7 @@ You are free to choose what kind of services and application to build. You could
 - Users receive notifications when a user in a game of theirs has made their move
 
 **Web Chat Application**
+
 - The app holds users, messages, notifications, …
 - Users can send messages between each other
 - Users receive notification when another user send them a message
@@ -33,6 +36,7 @@ All projects should implement authentication (user registration, login and logou
 - Optionally use a real-time push notification service, e.g. PubNub, Azure Notifications Hub or other
 
 **Client Application (JavaScript)**
+
 - Implement a simple client UI for your application:
 	- Do not put too much time on a beautiful UI.
 	- Use UI libraries and frameworks to save time.
@@ -61,6 +65,7 @@ Each team will have to deliver a public defense of its work in front of the othe
  - Be well prepared for presenting maximum of your work for minimum time. Bring your own laptop. Test it preliminary with the multimedia projector. Open the project assets beforehand to save time.
 
 **Assessment Criteria**
+
 - Service Authentication (register / login / logout) – 0…10
 - Service Functionality (at least 5 service endpoints) – 0…25
 - Client UI (the focus is on the services, not on the client, so the UI gives less points) – 0…10
@@ -70,4 +75,5 @@ Each team will have to deliver a public defense of its work in front of the othe
 - If not all team members have contributed to the project, this does not affect the Teamwork points.
 
 **Give Feedback about Your Teammates**
+
 You will be invited to provide feedback about all your teammates, their attitude to this project, their technical skills, their team working skills, their contribution to the project, etc. The feedback is important part of the project evaluation so take it seriously and be honest.
