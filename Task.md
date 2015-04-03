@@ -7,25 +7,24 @@ Design and implement RESTful Web services. Deploy the ASP.NET Web API applicatio
 You are free to choose what kind of services and application to build. You could implement project like:
 
 **Tic-tac-toe Game**
---------------------
 - The app holds users, games, …
 - Users can create game
 - Users can join an existing game
 - Users can perform moves in a started game
 - Users receive notifications when a user in a game of theirs has made their move
 
-***Web Chat Application***
---------------------
+**Web Chat Application**
 - The app holds users, messages, notifications, …
 - Users can send messages between each other
 - Users receive notification when another user send them a message
 
-*General Requirements*
+General Requirements
 ====================
 
 All projects should implement authentication (user registration, login and logout). Some services should be public, while others should be private (accessed after successful login).
 
 **Server-Side Application**
+
 - Your application must be implemented using ASP.NET Web API framework.
 - Expose your public services as RESTful Web services.
 - Host the application in a cloud environment, e.g. in AppHarbor or Azure.
@@ -41,6 +40,7 @@ All projects should implement authentication (user registration, login and logou
 - The application should run on a modern Web browser.
 
 **Additional Requirements**
+
 - Follow the best practices for OO design and high-quality code for the RESTful service app:
 	- Use data encapsulation.
 	- Use exception handling properly.
@@ -51,6 +51,7 @@ All projects should implement authentication (user registration, login and logou
 	- Submit a link to your public repository.
 
 **Public Project Defense**
+
 Each team will have to deliver a public defense of its work in front of the other students, trainers and assistants. Teams will have only 10 minutes for the following:
  - Demonstrate how the application works (very shortly).
  - Show the source code and explain how it works.
@@ -66,6 +67,7 @@ Each team will have to deliver a public defense of its work in front of the othe
 - Code Quality (well-structured code, split into classes and files, good naming, formatting, etc.) – 0…5
 - Teamwork* (source control; each team member contributed in 5 different days; distribution of tasks) – 0…5
 - Bonus (bonus points are given for implementing optional functionalities / original approach) – 0..5
-* If not all team members have contributed to the project, this does not affect the Teamwork points.
-***Give Feedback about Your Teammates**
+- If not all team members have contributed to the project, this does not affect the Teamwork points.
+
+**Give Feedback about Your Teammates**
 You will be invited to provide feedback about all your teammates, their attitude to this project, their technical skills, their team working skills, their contribution to the project, etc. The feedback is important part of the project evaluation so take it seriously and be honest.
