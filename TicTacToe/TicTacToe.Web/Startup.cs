@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Owin;
-using Owin;
+﻿using System.Reflection;
 using System.Web.Http;
+
+using Microsoft.Owin;
+
+using Ninject;
 using Ninject.Web.Common.OwinHost;
 using Ninject.Web.WebApi.OwinHost;
-using Ninject.Web.WebApi;
-using Ninject.Web;
-using Ninject;
-using System.Reflection;
+
+using Owin;
+
 using TicTacToe.Data;
-using System.Data.Entity;
 
 [assembly: OwinStartup(typeof(TicTacToe.Web.Startup))]
 

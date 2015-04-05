@@ -4,6 +4,7 @@
     using Microsoft.AspNet.Identity.EntityFramework;
 
     using TicTacToe.Data.Migrations;
+    using TicTacToe.Models;
     using TicTacToe.Web.Models;
 
     public class TicTacToeDbContext : IdentityDbContext<TicTacToeUser>
@@ -18,5 +19,7 @@
         {
             return new TicTacToeDbContext();
         }
+
+        public IDbSet<Game> Games { get; set; }
     }
 }

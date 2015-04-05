@@ -26,10 +26,9 @@
 
         public GameState State { get; set; }
 
-        [Column(TypeName = "nvarchar")]
+        [Required]
         public string FirstPlayerId { get; set; }
 
-        [Required]
         public virtual TicTacToeUser FirstPlayer { get; set; }
 
         public string SecondPlayerId { get; set; }
