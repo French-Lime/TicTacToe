@@ -10,10 +10,6 @@
     {
         private ITicTacToeData data;
 
-        public GamesController() : this(new TicTacToeData(new TicTacToeDbContext()))
-        {
-        }
-
         public GamesController(ITicTacToeData data)
         {
             this.data = data;
