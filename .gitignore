@@ -197,3 +197,6 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+/TicTacToe/.localhistory
+/TicTacToe/packages
+/TicTacToe/TicTacToe.Web/App_Data
