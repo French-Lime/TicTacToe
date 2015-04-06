@@ -12,6 +12,7 @@
     using TicTacToe.GameLogic;
     using TicTacToe.Models;
     using TicTacToe.Web.DataModels;
+    using TicTacToe.Web.Infrastructure;
 
     [Authorize]
     public class GamesController : ApiController
@@ -20,17 +21,27 @@
 
         private IGameResultValidator resultValidator;
 
+        private IUserIdProvider userIdProvider;
+
+        public GamesController(ITicTacToeData data, IGameResultValidator resultValidator, IUserIdProvider userIdProvider)
+        {
+            this.data = data;
+            this.resultValidator = resultValidator;
+            this.userIdProvider = userIdProvider;
+        }
+
         public GamesController(ITicTacToeData data, IGameResultValidator resultValidator)
         {
             this.data = data;
             this.resultValidator = resultValidator;
+            this.userIdProvider = new AspNetUserIdProvider(this.User);
         }
 
         [HttpPost]
         public IHttpActionResult Create()
         {
-            var currentUserId = this.User.Identity.GetUserId();
-            var newGame = new Game { FirstPlayerId = currentUserId, };
+            var currentUserId = this.userIdProvider.GetUserId();
+            var newGame = new Game { FirstPlayerId = currentUserId };
 
             this.data.Games.Add(newGame);
             this.data.SaveChanges();
@@ -42,7 +53,7 @@
         [HttpPost]
         public IHttpActionResult Join()
         {
-            var currentUserId = this.User.Identity.GetUserId();
+            var currentUserId = this.userIdProvider.GetUserId();
             var game =
                 this.data.Games.All().FirstOrDefault(g => g.State == GameState.WaitingForSecondPlayer && g.FirstPlayerId != currentUserId);
 
@@ -61,7 +72,7 @@
         [HttpGet]
         public IHttpActionResult Status(string gameId)
         {
-            var currentUserId = this.User.Identity.GetUserId();
+            var currentUserId = this.userIdProvider.GetUserId();
             var idAsGuid = new Guid(gameId);
 
             var game = this.data.Games.All()
@@ -98,7 +109,7 @@
         /// <param name="col">1, 2 or 3</param>
         public IHttpActionResult Play(PlayRequestDataModel playRequest)
         {
-            var currentUserId = this.User.Identity.GetUserId();
+            var currentUserId = this.userIdProvider.GetUserId();
 
             if (playRequest == null || !ModelState.IsValid)
             {
@@ -128,9 +139,7 @@
                 return this.BadRequest("It is not your turn!");
             }
 
-            // TODO: Check if game is active and save new state
-
-            var positionIndex = (playRequest.Row - 1) * 3 + playRequest.Col - 1;
+            var positionIndex = (playRequest.Row - 1) * 3 + (playRequest.Col - 1);
             if (game.Board[positionIndex] != '-')
             {
                 return this.BadRequest("This field is not free!");
@@ -146,8 +155,7 @@
 
             this.data.SaveChanges();
 
-            // TODO: Check if the game has ended and who won and save the state
-            var gameResult = resultValidator.GetResult(game.Board);
+            var gameResult = this.resultValidator.GetResult(game.Board);
             switch (gameResult)
             {
                 case GameResult.NotFinished:
