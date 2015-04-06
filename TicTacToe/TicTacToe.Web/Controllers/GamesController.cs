@@ -15,26 +15,21 @@
     using TicTacToe.Web.Infrastructure;
 
     [Authorize]
-    public class GamesController : ApiController
+    public class GamesController : BaseApiController
     {
-        private ITicTacToeData data;
 
         private IGameResultValidator resultValidator;
 
         private IUserIdProvider userIdProvider;
 
-        public GamesController(ITicTacToeData data, IGameResultValidator resultValidator, IUserIdProvider userIdProvider)
+        public GamesController(
+            ITicTacToeData data, 
+            IGameResultValidator resultValidator, 
+            IUserIdProvider userIdProvider) 
+            : base(data)
         {
-            this.data = data;
             this.resultValidator = resultValidator;
             this.userIdProvider = userIdProvider;
-        }
-
-        public GamesController(ITicTacToeData data, IGameResultValidator resultValidator)
-        {
-            this.data = data;
-            this.resultValidator = resultValidator;
-            this.userIdProvider = new AspNetUserIdProvider(this.User);
         }
 
         [HttpPost]
