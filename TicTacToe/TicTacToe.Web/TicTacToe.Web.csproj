@@ -239,6 +239,7 @@
     <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DataModels\GameInfoDataModel.cs" />
+    <Compile Include="DataModels\PlayRequestDataModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -320,6 +321,10 @@
     <ProjectReference Include="..\TicTacToe.Data\TicTacToe.Data.csproj">
       <Project>{9f52532f-6eb2-40f6-8197-805eb9a107ca}</Project>
       <Name>TicTacToe.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TicTacToe.GameLogic\TicTacToe.GameLogic.csproj">
+      <Project>{a3b8ac91-17b9-4f6f-b944-bac1cf06b764}</Project>
+      <Name>TicTacToe.GameLogic</Name>
     </ProjectReference>
     <ProjectReference Include="..\TicTacToe.Models\TicTacToe.Models.csproj">
       <Project>{fbec15c7-ff64-4d44-96d0-8478c86bad15}</Project>

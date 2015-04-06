@@ -15,6 +15,8 @@ using TicTacToe.Data;
 
 namespace TicTacToe.Web
 {
+    using TicTacToe.GameLogic;
+
     public partial class Startup
     {
         public void Configuration(IAppBuilder app)
@@ -35,6 +37,8 @@ namespace TicTacToe.Web
         {
             kernel.Bind<ITicTacToeData>().To<TicTacToeData>()
                 .WithConstructorArgument("context", c => new TicTacToeDbContext());
+
+            kernel.Bind<IGameResultValidator>().To<GameResultValidator>();
         }
     }
 }
