@@ -2,6 +2,7 @@
 {
     public class GameResultValidator : IGameResultValidator
     {
+        
         public GameResult GetResult(string board)
         {
             var result = GameResult.NotFinished;
@@ -64,12 +65,12 @@
 
         private GameResult CheckVertForWinner(string board, int startIndex, int i, int increment, GameResult result)
         {
-            var checkVerticals = board[startIndex + i].Equals(board[startIndex + i + increment])
-                                 && board[startIndex + i + increment].Equals(board[startIndex + i + increment * 2]);
+            var checkVerticals = board[startIndex + i].Equals(board[startIndex + i + increment]) && 
+                board[startIndex + i + increment].Equals(board[startIndex + i + increment * 2]);
 
             var firstFieldIndex = startIndex + i;
             result = this.WhoWinsGameResult(board, firstFieldIndex, checkVerticals, result);
-
+            
             return result;
         }
 
@@ -92,8 +93,8 @@
 
         private GameResult CheckDiagForWinner(string board, int startIndex, int increment, GameResult result)
         {
-            var checkDiag = board[startIndex].Equals(board[startIndex + increment])
-                                 && board[startIndex + increment].Equals(board[startIndex + increment * 2]);
+            var checkDiag = board[startIndex].Equals(board[startIndex + increment]) && 
+                board[startIndex + increment].Equals(board[startIndex + increment * 2]);
 
             var firstFieldIndex = startIndex;
             result = this.WhoWinsGameResult(board, firstFieldIndex, checkDiag, result);
