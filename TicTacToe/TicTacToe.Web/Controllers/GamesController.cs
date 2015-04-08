@@ -1,6 +1,7 @@
 ﻿namespace TicTacToe.Web.Controllers
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Text;
     using System.Web.Http;
@@ -102,6 +103,7 @@
 
         /// <param name="row">1, 2 or 3</param>
         /// <param name="col">1, 2 or 3</param>
+        [SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1407:ArithmeticExpressionsMustDeclarePrecedence", Justification = "Reviewed. Suppression is OK here.")]
         public IHttpActionResult Play(PlayRequestDataModel playRequest)
         {
             var currentUserId = this.userIdProvider.GetUserId();
@@ -167,7 +169,7 @@
 
                 case GameResult.WonBySecondPlayerO:
                     {
-                        game.State = GameState.WonByFirstPlayerO;
+                        game.State = GameState.WonBySecondPlayerO;
                         this.data.SaveChanges();
                         break;
                     }

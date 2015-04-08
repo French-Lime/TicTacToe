@@ -5,6 +5,6 @@
         NotFinished,
         WonByFirstPlayerX,
         WonBySecondPlayerO,
-        Draw,
+        Draw
     }
 }

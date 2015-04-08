@@ -7,7 +7,6 @@
         TurnSecondPlayerO = 2,
         WonByFirstPlayerX = 3,
         WonBySecondPlayerO = 4,
-        Draw = 5,
-        WonByFirstPlayerO
+        Draw = 5
     }
 }
