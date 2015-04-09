@@ -10,9 +10,9 @@ userAuth.accountController = (function () {
         var _this = this
 
         $(document).on('click', '.regMe', function () {
-            _this._data.Email = 'dbonev91@gmail.fgfgcvzcvhgjdgfgsdffg';
-            _this._data.Password = 'aaaaaa';
-            _this._data.ConfirmPassword = 'aaaaaa';
+            _this._data.Email = 'da@gmail.com';
+            _this._data.Password = 'dadada';
+            _this._data.ConfirmPassword = 'dadada';
 
             _this.persister.events.register('api/Account/Register', _this._data)
                 .then(function (result) {
