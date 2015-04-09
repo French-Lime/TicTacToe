@@ -6,12 +6,6 @@ var ajaxRequester = (function () {
             url: url,
             type: method,
             data: data || undefined,
-            headers: {
-                // 'Access-Control-Allow-Headers': '*',
-                // 'Access-Control-Allow-Origin': '*',
-                // 'Access-Control-Allow-Credentials': 'true'
-                // 'Access-Control-Allow-Methods': 'POST'
-            },
             contentType: 'application/x-www-form-urlencoded',
             dataType: 'json',
             success: function (result) {

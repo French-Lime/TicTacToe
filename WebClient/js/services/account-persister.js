@@ -1,6 +1,6 @@
-var userAuth = userAuth || {};
+var TicTacToe = TicTacToe || {};
 
-userAuth.accountPersister = (function () {
+TicTacToe.accountPersister = (function () {
     function AccountPersister (rootUrl) {
         this.rootUrl = rootUrl;
         this.events = new Events(rootUrl);
