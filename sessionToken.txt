@@ -1,32 +1,12 @@
-pEGERJbqrnN4P3QOciPRlaEumStXvkzj0vEj9-AMfYHCTIH9E7QQc0mqjjRY2c58_7C3bZas4Id_IPx0Z1ilGNBbjwhantHnp_9IMD1-q-MdMJJwSqEh-wSg0JVzGd820dhnPeEJ5aQ3KYLoQImgruScvghaPUWHnWal3o_tXRy2F3bXlfFjV5W25i685euToclIbzRLNaEej_exH9YOhJWmzJSsiumLkopUF8lbHzh4xelpbnzql14DCyyEcIhOdEas_om9q3TjVP_m1G6XdnTDk9cZtwhSvQS8_rEDMQYCEty6hlnj8faxj4IwQnobZLC6m-t7VIRKAUbHN-ejw5gHatlNsU8Acz-rbUncOCHJ8DQhb7kF5xSjtQQvgXfzSVzM3ib3VPSCQGoL2jsKcFxeATmvaXhAGCopSjU6bKH77gwas14kqPesm-pfKsuNIG6yGMvBBPTSZrQBXaApoO35ducYXJDidK9DE7sdu8E
+BzN3Z0rTtId_7VkUddTvA2xi3Ix5nvRksNreakQVmKxzfqrmCiCSxPHSMLqQSeDqSMUaadImDpudW0LIwomzN1oLnU2SiqjwzwsB8Ire8wD6nTjnwNw_1lk2Idux35zINLal3l-QQ_Z62sq5vYQBQWMu6aM5B5xA7Ijj73_ChJwS5wqLAYyE0Lp_0-Z2KR3Kr9OMrVQLi-45qC74nyZ9JFlvn8MzxaEElxn9ZU7DZ_v7Iqkhp5Et6dzbX8a0ynG8HSZh988EFPc9MlOyyVUG6i8UIZjeVUiGv4lbh04elhujdqWp9qsnCBk1JCeZdXNfi6is3i-0RwR-JFZpJHtT9NQ_nhnejJKv5Tc9yXvKS8NznxMvb8GmlYWznLoDLiFM3f7eEg0aQBT0lGaA-0C4Z_oKjofz_kQBHt1MHLRBGSNeliZtY8he3Rx81oOSU1qMsTdTCaSywNGxg398hlIe-XOyvjFvrOgPBuyAues99mI
 
 access token for 
-username: yana@yana.com
-password: 123456
-location - TW GitHub
-
-----------------------------
-
-Game Create Guid - 3ed452b8-4558-4dde-8e96-f5a346aa5363
-
-----------------------------
-
-7uRyl27Qt49kIyiuXNG0O7TZa45VtxfILOjhLNBvL78PqwvrFsNRTuGBw2TSlda0vaTTai8_Qk-pxvZJQmwWBjtTSNlRZE3ch0kpwAZ8yWF_67jLURzk70QB_iPcKtzHRyRG4tF5hXgnKzh8LsWLT4-AiczdOFtXfc8IL8bi9JoBcA3ANyF0dJnmVio-Mjux7GAwdf3Hmk8FbjrRYQ8i_G3qVU060SzmtSTG6QYTccY1H6cKBEqSbEs_Vt6BS3QnNshcTqHB1Y2Nfwcid-tCUIC2qRhApM9PhAcFxS5eu4yvKYAJgfChOMpVzqx0yCoulbtTHz3cqW1tLYwxThOGu0O2iKtNpxjEIOFHqXMRunwYGT0RN5_knHcD5bWYacFfql8fnA4uF_MTGeUbsT-71r-OQACFzbBhO-EfOqsH7i9CqduhldyqC0NlryrTKpl9nPOAgBtcIOg7Js6LCbUFIspPQ5XjMFOAPNXtETtYsqo
-
-access token for 
-username: test@test.com
+username: 123@123.com
 password: 123123
 location - TW GitHub
 
 ----------------------------
 
+Game Create Guid - 
 
-
----OLD---
-JITgmOFJQAGggUwT29dB95adee6dPxwg9gf_0FZ5kxrwf15DnxpzvPo-Tm9fz_gC_2hIHR2LrIQLOOluuNeUhhTPGyX-FktWLexUqKTrsgtOv6ju7dL6Sx9i3CgSliIkj5WaJe-IgHor-lr1hSDTCrEm5qR3BiWZYtar6MdlDIUp44a0kzJZmNV69C5nUmuA3zfasb76I_jQSdtUnfxt5y2UdyxaT5NmrigwonzKsv7bX_yigHe-LFHKIIyofHWSggCRwvnAEe5oaDn1HWNYLwpu8IMRDJnD_Td9KpXqbp7VxaF_76FSTr23kZiW2DklHssH0wtY90iZmJsIi89hQawH64P9z06iEqmTL2xoqA5373n8b3QXsuj3_Nn61eTBxG6QWVDJQH14aY9R3eXpr8ngvr8YBaJfZTDmKZiuK7jIHc8Fos41JYXF0PHNYwsPjFw6Eaur0ZtNd3qGYGgGwP990KFtNJ5MR3xMUH-xXoc
-
-access token for 
-username: yana@yana.com
-password: 123456
-location - main GitHub
----OLD---
+----------------------------
