@@ -15,8 +15,6 @@ namespace TicTacToe.Web
         {
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.
-            var corsAttr = new EnableCorsAttribute("http://localhost:50511", "*", "*");
-            config.EnableCors(corsAttr);
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
