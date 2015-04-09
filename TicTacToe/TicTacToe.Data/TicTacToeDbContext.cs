@@ -15,11 +15,11 @@
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<TicTacToeDbContext, Configuration>());
         }
 
+        public IDbSet<Game> Games { get; set; }
+
         public static TicTacToeDbContext Create()
         {
             return new TicTacToeDbContext();
         }
-
-        public IDbSet<Game> Games { get; set; }
     }
 }
