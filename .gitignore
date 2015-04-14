@@ -201,3 +201,7 @@ FakesAssemblies/
 /TicTacToe/packages
 /TicTacToe/TicTacToe.Web/App_Data
 /TicTacToe/TicTacToe.Tests/Areas
+/TicTacToe/TicTacToe.Web/Web.config
+/SignalR/C#/SignalRChat.v12.suo
+/ChatWithRooms/SignalRChat/Web.config
+/SignalR/C#/SignalRChat/Web.config
