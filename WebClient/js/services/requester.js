@@ -1,5 +1,5 @@
 var ajaxRequester = (function () {
-    var makeRequest = function (method, url, data) {
+    var makeRequest = function (method, url, data, headers) {
         var deferred = Q.defer();
 
         $.ajax({
@@ -8,6 +8,7 @@ var ajaxRequester = (function () {
             data: data || undefined,
             contentType: 'application/x-www-form-urlencoded',
             dataType: 'json',
+            headers: headers,
             success: function (result) {
                 deferred.resolve(result);
             },
@@ -22,12 +23,12 @@ var ajaxRequester = (function () {
         return deferred.promise;
     }
 
-    var makePostRequest = function (url, data) {
-        return makeRequest('POST', url, data);
+    var makePostRequest = function (url, data, headers) {
+        return makeRequest('POST', url, data, headers);
     }
 
-    var makeGetRequest = function (url, data) {
-        return makeRequest('GET', url, data);
+    var makeGetRequest = function (url, data, headers) {
+        return makeRequest('GET', url, data, headers);
     }
 
     return {

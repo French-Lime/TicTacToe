@@ -1,17 +1,22 @@
 $(document).ready(function () {
     (function () {
-        var rootFolder = '/WebAndCloudTeamWork/';
-        var rootUrl = 'http://localhost:50511/';
-        var accountPersister = TicTacToe.accountPersister.get(rootUrl);
+        var ROOT_FOLDER = '/WebAndCloudTeamWork/';
+        var ROOT_URL = 'http://localhost:50511/';
+
+        var accountPersister = TicTacToe.accountPersister.get(ROOT_URL);
         var accountController = TicTacToe.accountController.get(accountPersister);
         accountController.load();
 
+        var gameplayPersister = TicTacToe.gameplayPersister.get(ROOT_URL);
+        var gameplayController = TicTacToe.gameplayController.get(gameplayPersister);
+        gameplayController.load();
+
         var sammy = Sammy('.views-container', function () {
             this.get('#/login', function () {
-                this.$element().load(rootFolder + 'views/login-view.html');
+                this.$element().load(ROOT_FOLDER + 'views/login-view.html');
             })
             this.get('#/register', function () {
-                this.$element().load(rootFolder + 'views/register-view.html');
+                this.$element().load(ROOT_FOLDER + 'views/register-view.html');
             })
             this.get('#/', function () {
                 this.$element().empty();

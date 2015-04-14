@@ -7,7 +7,7 @@ TicTacToe.user = (function () {
     }
 
     User.prototype.setToken = function (token) {
-        this._token = 'bearer ' + token;
+        this._token = 'Bearer ' + token;
     }
 
     User.prototype.getToken = function () {

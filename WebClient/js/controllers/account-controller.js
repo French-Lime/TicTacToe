@@ -12,7 +12,7 @@ TicTacToe.accountController = (function () {
 
         if (sessionStorage['access_token']) {
             this._user = new TicTacToe.user(
-                    sessionStorage['access_token'], sessionStorage['username']);
+                sessionStorage['access_token'], sessionStorage['username']);
         }
 
         if (!$.isEmptyObject(this._user)) {
