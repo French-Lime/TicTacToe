@@ -10,20 +10,26 @@ using Ninject.Web.WebApi.OwinHost;
 using Owin;
 
 using TicTacToe.Data;
-
+    
 [assembly: OwinStartup(typeof(TicTacToe.Web.Startup))]
 
 namespace TicTacToe.Web
 {
     using TicTacToe.GameLogic;
     using TicTacToe.Web.Infrastructure;
+    using Microsoft.AspNet.SignalR;
 
     public partial class Startup
     {
         public void Configuration(IAppBuilder app)
         {
+            // Any connection or hub wire up and configuration should go here
+            // Install-Package Microsoft.AspNet.SignalR in the console to match versions
+            app.MapSignalR();
+
             ConfigureAuth(app);
             app.UseNinjectMiddleware(CreateKernel).UseNinjectWebApi(GlobalConfiguration.Configuration);
+            
         }
 
         private static StandardKernel CreateKernel()
@@ -41,7 +47,7 @@ namespace TicTacToe.Web
 
             kernel.Bind<IGameResultValidator>().To<GameResultValidator>();
 
-            kernel.Bind<IUserIdProvider>().To<AspNetUserIdProvider>();
+            kernel.Bind<TicTacToe.Web.Infrastructure.IUserIdProvider>().To<AspNetUserIdProvider>();
         }
     }
 }

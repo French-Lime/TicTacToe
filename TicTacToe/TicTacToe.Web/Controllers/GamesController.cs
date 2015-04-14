@@ -130,8 +130,8 @@
                 return this.BadRequest("This is not your game!");
             }
 
-            if ((game.State == GameState.TurnFirstPlayerX && game.FirstPlayerId != currentUserId)
-                || (game.State == GameState.TurnSecondPlayerO && game.SecondPlayerId != currentUserId))
+            if ((game.State == GameState.TurnFirstPlayerX && game.FirstPlayerId != currentUserId)||
+                (game.State == GameState.TurnSecondPlayerO && game.SecondPlayerId != currentUserId))
             {
                 return this.BadRequest("It is not your turn!");
             }
