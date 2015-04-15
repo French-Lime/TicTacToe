@@ -1,26 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Security.Claims;
-using System.Security.Cryptography;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Http;
-
-using System.Web.Http.Cors;
-using System.Web.Http.ModelBinding;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.OAuth;
-using TicTacToe.Web.Models;
-using TicTacToe.Web.Providers;
-using TicTacToe.Web.Results;
-
-namespace TicTacToe.Web.Controllers
+﻿namespace TicTacToe.Web.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Net.Http;
+    using System.Security.Claims;
+    using System.Security.Cryptography;
+    using System.Threading.Tasks;
+    using System.Web;
+    using System.Web.Http;
+
+    using System.Web.Http.Cors;
+    using System.Web.Http.ModelBinding;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
+    using Microsoft.AspNet.Identity.Owin;
+    using Microsoft.Owin.Security;
+    using Microsoft.Owin.Security.Cookies;
+    using Microsoft.Owin.Security.OAuth;
+    using TicTacToe.Web.Models;
+    using TicTacToe.Web.Providers;
+    using TicTacToe.Web.Results;
+
     [Authorize]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
@@ -331,7 +331,7 @@ namespace TicTacToe.Web.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new TicTacToeUser() { UserName = model.Email, Email = model.Email };
+            var user = new TicTacToeUser { UserName = model.Username, Email = model.Email };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
