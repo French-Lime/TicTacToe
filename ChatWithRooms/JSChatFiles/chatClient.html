@@ -4,8 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>web client</title>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="jquery-1.10.2.js"></script>
   <script src="jquery.signalR-2.2.0.js"></script>
+  <script src="hubs.js"></script>
+  <script src="server.js"></script>
+  
 </head>
 <body>
  
@@ -33,17 +36,42 @@
 <div id="messages">
 
 </div>
-
+<script>
+</script>
 <script>
     var rooms = [];
 
     $(document).ready(function () {
 
-        $.connection.hub.url = "http://localhost:50511/"
-		$.connection.hub.start().done(init);
+	$.connection.hub.start().done(function () {
+		console.log("Connected, transport = " + $.connection.hub.transport.name);
+	});
+	
+	$.connection.hub.qs = { 'version' : '1.0' };
+	
+	$.connection.hub.url = "/signalr"
+	$.connection.hub.start();
 
-        var chat = $.connection.chat;
+	
+	
+	var chat = $.connection.chat;
+	chat.clients.sendMessage = function (message) {
+		console.log(message);
+	};
 
+	$.connection.hub.logging = true;
+	
+	$.connection.hub.start()
+
+    .done(function(){ console.log('Now connected, connection ID=' + $.connection.hub.id); })
+    .fail(function(){ console.log('Could not Connect!'); });
+
+		chat.server.NewContosoChatMessage(userName, message).done(function () {
+        console.log ('Invocation of NewContosoChatMessage succeeded');
+    }).fail(function (error) {
+        console.log('Invocation of NewContosoChatMessage failed. Error: ' + error);
+    });
+	
         $('#send-message').click(function () {
 
             var msg = $('#message').val();
@@ -68,7 +96,9 @@
         chat.client.addMessage = addMessage;
         chat.client.joinRoom = joinRoom;
     });
+	
 
+	
     function addMessage(message) {
         $('#messages').append('<div>' + message + '</div>');
     }
