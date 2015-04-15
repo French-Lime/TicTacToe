@@ -1,0 +1,83 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>web client</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="jquery.signalR-2.2.0.js"></script>
+</head>
+<body>
+ 
+<p>Hello</p>
+<p>Here is another paragraph</p>
+ 
+ <div id="currentRooms">
+    <div>
+        Current rooms:
+    </div>
+</div>
+
+<div>
+    <input type="text" id="room" value="Room" />
+    <button id="join-room">Join</button>
+    <br />    
+    <input type="text" id="message" value="message" />
+    <button id="send-message">Send</button>
+    <br />
+    <input type="text" id="room-message" value="message" />
+    <button id="send-message-to-room">Send To Rooms Only</button>
+</div>
+
+
+<div id="messages">
+
+</div>
+
+<script>
+    var rooms = [];
+
+    $(document).ready(function () {
+
+        $.connection.hub.url = "http://localhost:50511/"
+		$.connection.hub.start().done(init);
+
+        var chat = $.connection.chat;
+
+        $('#send-message').click(function () {
+
+            var msg = $('#message').val();
+
+            chat.server.sendMessage(msg);
+        });
+
+        $("#join-room").click(function () {
+
+            var room = $('#room').val();
+
+            chat.server.joinRoom(room)
+        });
+
+        $('#send-message-to-room').click(function () {
+
+            var msg = $('#room-message').val();
+
+            chat.server.sendMessageToRoom(msg, rooms);
+        });
+
+        chat.client.addMessage = addMessage;
+        chat.client.joinRoom = joinRoom;
+    });
+
+    function addMessage(message) {
+        $('#messages').append('<div>' + message + '</div>');
+    }
+
+    function joinRoom(room) {
+        rooms.push(room);
+        $('#currentRooms').append('<div>' + room + '</div>');
+    }
+</script>
+ 
+</body>
+</html>

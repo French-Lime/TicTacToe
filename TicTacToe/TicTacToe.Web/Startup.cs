@@ -1,23 +1,19 @@
-﻿using System.Reflection;
-using System.Web.Http;
+﻿using Microsoft.Owin;
 
-using Microsoft.Owin;
-
-using Ninject;
-using Ninject.Web.Common.OwinHost;
-using Ninject.Web.WebApi.OwinHost;
-
-using Owin;
-
-using TicTacToe.Data;
-    
 [assembly: OwinStartup(typeof(TicTacToe.Web.Startup))]
-
 namespace TicTacToe.Web
 {
+
+    using Ninject;
+    using Ninject.Web.Common.OwinHost;
+    using Ninject.Web.WebApi.OwinHost;
+    using Owin;
+    using System.Reflection;
+    using System.Web.Http;
+
+    using TicTacToe.Data;
     using TicTacToe.GameLogic;
     using TicTacToe.Web.Infrastructure;
-    using Microsoft.AspNet.SignalR;
 
     public partial class Startup
     {
