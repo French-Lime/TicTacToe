@@ -1,5 +1,5 @@
-<ul class="guest-options">
-    <li class="option">
+<div class="guest-options">
+    <!-- <li class="option">
         <a href="#/">Home</a>
     </li>
     <li class="option">
@@ -7,5 +7,30 @@
     </li>
     <li class="option">
         <a href="#/register">Register</a>
-    </li>
-</ul>
+    </li> -->
+    <form class="register-form account-form">
+        <span class="registerHeading formHeading">Нов потребител</span>
+        <input type="text" class="username field"
+            placeholder="Потребителско име" id="username" />
+        <input type="text" class="email field"
+            placeholder="Email" id="username" />
+        <input type="text" class="firstName field"
+            placeholder="Име" id="firstName" />
+        <input type="text" class="lastName field"
+            placeholder="Фамилия" id="lastName" />
+        <input type="password" class="password field"
+            placeholder="Парола" id="password" />
+        <input type="password" class="confirm-password field"
+            placeholder="Повтори парола" id="confirm-password" />
+        <input type="submit" value="Регистрация"
+            class="registerButton button" />
+    </form><form class="login-form account-form">
+        <span class="loginHeading formHeading">Влизане</span>
+        <input type="text" class="username field"
+            placeholder="Потребителско име" id="username" />
+        <input type="password" class="password field"
+            placeholder="Парола" id="password" />
+        <input type="submit" value="Вход"
+            class="loginButton button" />
+    </form>
+</div>

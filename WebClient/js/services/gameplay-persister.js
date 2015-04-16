@@ -15,6 +15,14 @@ TicTacToe.gameplayPersister = (function () {
             return ajaxRequester.postRequest(this.eventUrl + routeUrl, null, headers);
         }
 
+        Events.prototype.joinGame = function (routeUrl, headers) {
+            return ajaxRequester.postRequest(this.eventUrl + routeUrl, null, headers);
+        }
+
+        Events.prototype.gameStatus = function (routeUrl, headers) {
+            return ajaxRequester.postRequest(this.eventUrl + routeUrl, null, headers);
+        }
+
         return Events;
     })();
 

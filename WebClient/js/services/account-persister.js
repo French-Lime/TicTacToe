@@ -16,7 +16,11 @@ TicTacToe.accountPersister = (function () {
         }
 
         Events.prototype.login = function (routeUrl, data) {
-          return ajaxRequester.postRequest(this.eventUrl + routeUrl, data);
+            return ajaxRequester.postRequest(this.eventUrl + routeUrl, data);
+        }
+
+        Events.prototype.logout = function (routeUrl, headers) {
+            return ajaxRequester.postRequest(this.eventUrl + routeUrl, null, headers);
         }
 
         return Events;

@@ -1,7 +1,8 @@
 $(document).ready(function () {
     (function () {
         var ROOT_FOLDER = '/WebAndCloudTeamWork/';
-        var ROOT_URL = 'http://localhost:50511/';
+        // var ROOT_URL = 'http://frenchlime.cloudapp.net/';
+        var ROOT_URL = 'http://frenchlime.cloudapp.net/';
 
         var accountPersister = TicTacToe.accountPersister.get(ROOT_URL);
         var accountController = TicTacToe.accountController.get(accountPersister);
