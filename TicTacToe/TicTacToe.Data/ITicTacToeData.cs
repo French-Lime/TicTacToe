@@ -10,6 +10,8 @@
 
         IRepository<Game> Games { get; }
 
+        IRepository<ChatMessage> ChatMessages { get; } 
+
         int SaveChanges();
     }
 }

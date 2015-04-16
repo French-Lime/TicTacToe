@@ -38,6 +38,14 @@
             }
         }
 
+        public IRepository<ChatMessage> ChatMessages
+        {
+            get
+            {
+                return this.GetRepository<ChatMessage>();
+            }
+        }
+
         public int SaveChanges()
         {
             return this.context.SaveChanges();
