@@ -323,7 +323,7 @@
         // POST api/Account/Register
         [AllowAnonymous]
         [Route("Register")]
-        [EnableCors(origins: "*", headers: "*", methods: "*")]
+        //[EnableCors(origins: "*", headers: "*", methods: "*")]
         public async Task<IHttpActionResult> Register(RegisterBindingModel model)
         {
             if (!ModelState.IsValid)

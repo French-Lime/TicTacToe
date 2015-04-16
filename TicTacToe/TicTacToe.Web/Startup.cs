@@ -21,6 +21,12 @@ namespace TicTacToe.Web
     {
         public void Configuration(IAppBuilder app)
         {
+
+            var config = new HttpConfiguration();
+            app.UseCors(CorsOptions.AllowAll);
+            app.UseWebApi(config);
+            this.ConfigureAuth(app);
+
             // Any connection or hub wire up and configuration should go here
             // Install-Package Microsoft.AspNet.SignalR in the console to match versions
             //app.MapSignalR();
@@ -45,9 +51,7 @@ namespace TicTacToe.Web
                 map.RunSignalR(hubConfiguration);
             });
 
-            ConfigureAuth(app);
             app.UseNinjectMiddleware(CreateKernel).UseNinjectWebApi(GlobalConfiguration.Configuration);
-            
         }
 
         private static StandardKernel CreateKernel()
@@ -65,7 +69,7 @@ namespace TicTacToe.Web
 
             kernel.Bind<IGameResultValidator>().To<GameResultValidator>();
 
-            kernel.Bind<TicTacToe.Web.Infrastructure.IUserIdProvider>().To<AspNetUserIdProvider>();
+            kernel.Bind<IUserIdProvider>().To<AspNetUserIdProvider>();
         }
     }
 }
