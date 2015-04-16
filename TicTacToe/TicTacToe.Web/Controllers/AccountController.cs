@@ -331,7 +331,7 @@
                 return BadRequest(ModelState);
             }
 
-            var user = new TicTacToeUser { UserName = model.Username, Email = model.Email };
+            var user = new TicTacToeUser { UserName = model.Username, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
