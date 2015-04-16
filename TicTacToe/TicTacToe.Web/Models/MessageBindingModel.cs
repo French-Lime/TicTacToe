@@ -4,7 +4,7 @@ namespace TicTacToe.Web.Models
 {
     public class MessageBindingModel
     {
-        public string Name { get; set; }
+        public string Content { get; set; }
 
         public Guid UserId { get; set; }
     }

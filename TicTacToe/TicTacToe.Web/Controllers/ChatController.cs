@@ -1,13 +1,14 @@
 ﻿namespace TicTacToe.Web.Controllers
 {
-    using System.Web.Http;
     using System.Linq;
+    using System.Web.Http;
 
-    using TicTacToe.Models;
     using TicTacToe.Data;
+    using TicTacToe.Models;
     using TicTacToe.Web.Models;
 
-
+    [Authorize]
+    [RoutePrefix("api/Chat")]
     public class ChatController : BaseApiController
     {
         public ChatController(ITicTacToeData data)
@@ -16,7 +17,8 @@
         }
         
         [HttpGet]
-        public IHttpActionResult Get()
+        [Route("Messages")]
+        public IHttpActionResult GetMessages()
         {
             var messages = this.data.ChatMessages
                 .All()
@@ -26,8 +28,17 @@
             return this.Ok(messages);
         }
 
+        [HttpGet]
+        [Route(Name = "GetMessageById")]
+        public IHttpActionResult GetMessageById(int id)
+        {
+            var message = this.data.ChatMessages.Find(id);
+            return this.Ok(message);
+        }
+
         [HttpPost]
-        public IHttpActionResult PostMessage(MessageBindingModel model)
+        [Route("Send")]
+        public IHttpActionResult PostSend(MessageBindingModel model)
         {
             if (!this.ModelState.IsValid || model == null)
             {
@@ -36,17 +47,20 @@
 
             var message = new ChatMessage
             {
-                Content = model.Name,
+                Content = model.Content,
                 UserId = model.UserId.ToString(),
             };
 
             this.data.ChatMessages.Add(message);
             this.data.SaveChanges();
 
-            return this.CreatedAtRoute("DefaultApi", new { id = message.Id}, message);
+            // return this.CreatedAtRoute("DefaultApi", new { id = message.Id }, message);
+            // return this.CreatedAtRoute("GetMessageById", new { id = message.Id }, message);
+            return this.Ok(message.Id);
         }
 
         [HttpPut]
+        [Route("Edit")]
         public IHttpActionResult EditMessage(int id, MessageBindingModel model)
         {
             if (!this.ModelState.IsValid || model == null)
@@ -68,6 +82,7 @@
         }
 
         [HttpDelete]
+        [Route("Delete")]
         public IHttpActionResult DeleteMessage(int id)
         {
             var message = this.data.ChatMessages.Find(id);
