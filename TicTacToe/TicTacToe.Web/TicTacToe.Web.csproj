@@ -261,7 +261,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Hubs\Chat.cs" />
     <Compile Include="Infrastructure\AspNetUserIdProvider.cs" />
     <Compile Include="Infrastructure\IUserIdProvider.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
